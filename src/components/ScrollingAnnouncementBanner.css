@@ -1,0 +1,20 @@
+.scrolling-text {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scroll-left 12s linear infinite;
+  padding-left: 100%; /* start fully from right */
+   width: 100%;
+  height: 40px;            /* adjust bar height */
+  line-height: 40px;       /* vertically center text */
+  margin-top: -20px;  
+}
+
+/* Keyframes for right-to-left reset */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100%); /* off-screen right */
+  }
+  100% {
+    transform: translateX(-100%); /* fully off-screen left */
+  }
+}
